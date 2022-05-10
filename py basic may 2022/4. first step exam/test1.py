@@ -1,1 +1,0 @@
-print("kvo stava manqci")
