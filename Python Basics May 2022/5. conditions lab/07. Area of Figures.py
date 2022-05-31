@@ -1,15 +1,17 @@
-import math
+from math import pi
 
 figure = input()
-size = float(input())
+first_input = float(input())
+result = 0
 if figure == "circle" or figure == "square":
     if figure == "circle":
-        print(size * size * math.pi)
+        result = first_input ** 2 * pi
     else:
-        print(size * size)
+        result = first_input * first_input
 else:
-    side_b = float(input())
+    second_input = float(input())
     if figure == "rectangle":
-        print(size * side_b)
+        result = first_input * second_input
     else:
-        print(size * side_b / 2)
+        result = first_input * second_input / 2
+print(f"{result:.3f}")
