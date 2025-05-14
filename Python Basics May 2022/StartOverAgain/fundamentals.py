@@ -360,12 +360,12 @@ from os.path import split
 #         print(f"{text} is not pure!")
 #         continue
 #     print(f"{text} is pure.")
-    # for char in chars:
-    #     if char in text:
-    #         print(f"{text} is not pure!")
-    #         break
-    # else:
-    #     print(f"{text} is pure.")
+# for char in chars:
+#     if char in text:
+#         print(f"{text} is not pure!")
+#         break
+# else:
+#     print(f"{text} is pure.")
 
 # text = input()
 # list = []
@@ -489,3 +489,216 @@ from os.path import split
 # for word in words:
 #     count += text.count(word)
 # print(count)
+
+# num_one = int(input())
+# num_two = int(input())
+# num_three = int(input())
+# num_four = int(input())
+# print(int((num_one+num_two)/num_three)*num_four)
+
+# first_char = input()
+# second_char = input()
+# third_char = input()
+# print(f"{first_char}{second_char}{third_char}")
+
+# persons = int(input())
+# capacity = int(input())
+# result = persons // capacity
+# if persons % capacity != 0:
+#     result += 1
+# print(result)
+
+# numbers = int(input())
+# total = 0
+# while numbers != 0:
+#    char = input()
+#    total += ord(char)
+#    numbers-=1
+# print(f"The sum equals: {total}")
+
+# start = int(input())
+# end = int(input())
+# for i in range(start, end + 1):
+#     print(chr(i), end=" ")
+
+# num = int(input())
+# for first in range(0,num):
+#     for second in range(0,num):
+#         for third in range(0,num):
+#             print(f"{chr(97+first)}{chr(97+second)}{chr(97+third)}")
+
+# capacity = 0
+# number_of_lines = int(input())
+# while number_of_lines != 0:
+#     number_of_lines -= 1
+#     liters = int(input())
+#     capacity += liters
+#     if capacity>255:
+#         print("Insufficient capacity!")
+#         capacity-=liters
+# print(capacity)
+
+# group_size = int(input())
+# days = int(input())
+# price = 0
+# for i in range(1, days + 1):
+#     if i % 10 == 0:
+#         group_size -= 2
+#     if i % 15 == 0:
+#         group_size += 5
+#     price += 50
+#     price -= group_size * 2
+#     if i % 5 == 0:
+#         price += group_size*20
+#         if i % 3 == 0:
+#             price -= group_size * 2
+#     if i % 3 == 0:
+#         price -= group_size * 3
+# print(f"{group_size} companions received {price//group_size} coins each.")
+
+# number_of_snowballs = int(input())
+# best = 0
+# best_weight = 0
+# best_time = 0
+# best_quality = 0
+# for i in range(number_of_snowballs):
+#     weight_of_snowball = int(input())
+#     time_needed = int(input())
+#     quality = int(input())
+#     value = int((weight_of_snowball / time_needed) ** quality)
+#     if value > best:
+#         best = value
+#         best_time = time_needed
+#         best_quality = quality
+#         best_weight = weight_of_snowball
+# print(f"{best_weight} : {best_time} = {best} ({best_quality})")
+
+# lost_fights_count = int(input())
+# helmet_price = float(input())
+# sword_price = float(input())
+# shield_price = float(input())
+# armor_price = float(input())
+# count_shield = 0
+# total = 0
+# for i in range(1, lost_fights_count + 1):
+#     if i % 2 == 0:
+#         total += helmet_price
+#     if i % 3 == 0:
+#         total += sword_price
+#         if i % 2 == 0:
+#             total += shield_price
+#             count_shield += 1
+#             if count_shield % 2 == 0:
+#                 total += armor_price
+# print(f"Gladiator expenses: {total:.2f} aureus")
+
+# a = int(input())
+# b = int(input())
+# print("Before:")
+# print(f"a = {a}")
+# print(f"b = {b}")
+# x = a
+# a = b
+# b = x
+# print("After:")
+# print(f"a = {a}")
+# print(f"b = {b}")
+
+# number = int(input())
+# prime = True
+# for i in range(2, number):
+#     if number % i == 0:
+#         prime = False
+# print(prime)
+
+# key = int(input())
+# lines = int(input())
+# for i in range(lines):
+#     char = input()
+#     result = ord(char)+key
+#     print(chr(result), end="")
+
+# number_of_lines = int(input())
+# open_count = 0
+# close_count = 0
+# result = "BALANCED"
+# for i in range(number_of_lines):
+#     line = input()
+#     if line == "(":
+#         open_count += 1
+#     if line == ")":
+#         if open_count != 1:
+#             result = "UNBALANCED"
+#         open_count = 0
+#     if i + 1 == number_of_lines:
+#         if open_count != 0:
+#             result = "UNBALANCED"
+# print(result)
+
+# tail = input()
+# body = input()
+# head = input()
+# meerkat = [tail, body, head]
+# meerkat[0], meerkat[2] = meerkat[2],meerkat[0]
+# print(meerkat)
+
+# number_of_courses = int(input())
+# courses = []
+# for i in range(number_of_courses):
+#     course_name = input()
+#     courses.append(course_name)
+# print(courses)
+
+# numbers_of_integers = int(input())
+# positives = []
+# negatives = []
+# for i in range(numbers_of_integers):
+#     num = int(input())
+#     if num >= 0:
+#        positives.append(num)
+#     else:
+#         negatives.append(num)
+# print(positives)
+# print(negatives)
+# print(f"Count of positives: {len(positives)}\nSum of negatives: {sum(negatives)}")
+
+# n = int(input())
+# word = input()
+# all_list = []
+# sieved_list = []
+# for i in range (n):
+#     text = input()
+#     all_list.append(text)
+#     if word in text:
+#         sieved_list.append(text)
+# print(all_list)
+# print(sieved_list)
+
+# n = int(input())
+# list = []
+# processed_list = []
+# for i in range(n):
+#     number = int(input())
+#     list.append(number)
+# command = input()
+# for i in range(len(list)):
+#     if command == "even":
+#         if list[i] % 2 == 0 or list[i] == 0:
+#             processed_list.append(list[i])
+#     elif command == "odd":
+#         if list[i] % 2 != 0:
+#             processed_list.append(list[i])
+#     elif command == "positive":
+#         if list[i] >= 0:
+#             processed_list.append(list[i])
+#     else:
+#         if list[i] <  0:
+#             processed_list.append(list[i])
+# print(processed_list)
+
+# nums = input()
+# list = nums.split(" ")
+# new_list = []
+# for i in range(len(list)):
+#     new_list.append(int(list[i]) * -1)
+# print(new_list)
