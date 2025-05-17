@@ -1,9 +1,5 @@
 def even_only(num):
-    if num % 2 == 0:
-        return True
-    else:
-        return False
-
+    return num % 2 == 0
 
 numbers_as_string = input().split()
 numbers = []
