@@ -18,8 +18,8 @@
 
 
 def lenght_cheker(password):
-    if 6 <= len(password) <= 10:
-        return True
+    return 6 <= len(password) <= 10
+
 
 
 def sym_checker(password):
@@ -27,7 +27,7 @@ def sym_checker(password):
     for sym in password:
         if sym.isalnum():
             sym_count += 1
-    return sym_count
+    return sym_count == len(password)
 
 
 def digit_checker(password):
@@ -35,15 +35,15 @@ def digit_checker(password):
     for n in password:
         if n.isdigit():
             count_digit += 1
-    return count_digit
+    return count_digit >= 2
 
 
 password = input()
 if not lenght_cheker(password):
     print("Password must be between 6 and 10 characters")
-if sym_checker(password) < len(password):
+if not sym_checker(password):
     print("Password must consist only of letters and digits")
-if digit_checker(password) < 2:
+if not digit_checker(password):
     print("Password must have at least 2 digits")
-if lenght_cheker(password) and sym_checker(password) == len(password) and digit_checker(password) >= 2:
+if lenght_cheker(password) and sym_checker(password) and digit_checker(password):
     print("Password is valid")
